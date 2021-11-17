@@ -1,8 +1,8 @@
 // --------------------------
 // VARIABLES
 // --------------------------
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: gold;
+$contrastcolor: darkgray;
 
 @mixin white-text-black-bg {
   color: $contrastcolor;
@@ -16,6 +16,7 @@ $contrastcolor: white;
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: gray
 }
 
 // --------------------------
@@ -34,4 +35,41 @@ nav {
       font-size: large;
     }
   }
+}
+
+section,
+div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 15px;
+      
+      &[type="submit"]:hover {
+        @include black-test-white-bg;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 15px;
+        transition: all 0.5s;
+        content: '»';
+
+
+      
+        
+       
+ 
+       
+       
+       
+        
+      }
+    }
+  }
+}
+
+img{
+    width: 400px;
+    height: 400px;
 }
